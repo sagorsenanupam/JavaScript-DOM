@@ -6,8 +6,8 @@
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="/styles/styles.css" />
     <style>
-      li {
-        color: tomato;
+      .fruits-container li {
+        color: black;
       }
     </style>
   </head>
@@ -31,7 +31,7 @@
           <li>DOM de re baba</li>
         </ul>
       </section>
-      <section>
+      <section class="fruits-container">
         <h1 id="fruits-title">Fruits I like</h1>
         <ul>
           <li>Apple</li>
@@ -45,12 +45,13 @@
           <li class="important-places">Sundarban</li>
           <li class="important-places">Bandarban</li>
           <li class="important-places">Kataban</li>
-          <li class="important-places">Bashbon</li>
+          <li class="other-places">Bashbon</li>
         </ul>
       </section>
     </main>
     <script src="/js/dom.js"></script>
     <script>
+      // Option- getElementsByTagName
       const liCollection = document.getElementsByTagName("li");
       //   console.log(liCollection);
       for (const li of liCollection) {
@@ -62,12 +63,26 @@
         // console.log(h1.innerText);
       }
 
+      //   Option-2 getElementsByClassName
       const places = document.getElementsByClassName("important-places");
       for (const place of places) {
         console.log(place.innerText);
       }
+
+      //   option 3: getElementById
       const fruitsTitle = document.getElementById("fruits-title");
       fruitsTitle.innerText = "Fruits Changed by JS";
+
+      // Option 4  QuerySelectorAll
+      // Option 5  QuerySelector
+      const someLi = document.querySelectorAll(".fruits-container li");
+      console.log(someLi);
+
+      for (const li of someLi) {
+        console.log(li.innerText);
+      }
+      //   NodeList --> Static
+      // HTML COllection --> Dynamic/Live
     </script>
   </body>
 </html>

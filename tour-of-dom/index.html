@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="/styles/styles.css" />
+    
     <style>
       .fruits-container li {
         color: black;
@@ -39,7 +40,7 @@
           <li>Carrot</li>
         </ul>
       </section>
-      <section>
+      <section id="places-container">
         <h1 id="places-title">Places I like to visit</h1>
         <ul>
           <li class="important-places">Sundarban</li>
@@ -49,6 +50,7 @@
         </ul>
       </section>
     </main>
+    <script src="/js/styleInJs.js"></script>
     <script src="/js/dom.js"></script>
     <script>
       // Option- getElementsByTagName
@@ -66,7 +68,7 @@
       //   Option-2 getElementsByClassName
       const places = document.getElementsByClassName("important-places");
       for (const place of places) {
-        console.log(place.innerText);
+        // console.log(place.innerText);
       }
 
       //   option 3: getElementById
@@ -76,10 +78,10 @@
       // Option 4  QuerySelectorAll
       // Option 5  QuerySelector
       const someLi = document.querySelectorAll(".fruits-container li");
-      console.log(someLi);
+      // console.log(someLi);
 
       for (const li of someLi) {
-        console.log(li.innerText);
+        // console.log(li.innerText);
       }
       //   NodeList --> Static
       // HTML COllection --> Dynamic/Live

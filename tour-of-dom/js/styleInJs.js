@@ -7,5 +7,9 @@ for (const section of sections) {
     section.style.backgroundColor = 'lightblue';
 }
 
+// const placesContainer = document.getElementById('places-container');
+// placesContainer.style.backgroundColor = 'yellow';
+
 const placesContainer = document.getElementById('places-container');
-placesContainer.style.backgroundColor = 'yellow';
+placesContainer.classList.add ()
+// Egula hocche CSS in JavaScript

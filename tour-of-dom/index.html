@@ -22,7 +22,7 @@
         distinctio atque!
       </p>
     </header>
-    <main>
+    <main id="main-container">
       <section>
         <h1>My Awesome DOM de baba</h1>
         <ul>
@@ -42,7 +42,7 @@
       </section>
       <section id="places-container">
         <h1 id="places-title">Places I like to visit</h1>
-        <ul>
+        <ul id="places-list">
           <li class="important-places">Sundarban</li>
           <li class="important-places">Bandarban</li>
           <li class="important-places">Kataban</li>
@@ -50,8 +50,9 @@
         </ul>
       </section>
     </main>
-    <script src="/js/styleInJs.js"></script>
     <script src="/js/dom.js"></script>
+    <script src="/js/append.js"></script>
+    <script src="/js/styleInJs.js"></script>
     <script>
       // Option- getElementsByTagName
       const liCollection = document.getElementsByTagName("li");
